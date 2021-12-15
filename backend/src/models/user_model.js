@@ -1,4 +1,4 @@
-/*const {Schema, model} = require("mongoose");
+const {Schema, model} = require("mongoose");
 
 const user_model_chema = new Schema({
     nombre:{
@@ -7,9 +7,12 @@ const user_model_chema = new Schema({
     email:{
         type: String
     },
+    telefono:{
+        type: String
+    },
     pass:{
         type: String
     }
 });
 
-module.exports = model("user_model",user_model_chema,"users")*/
+module.exports = model("user_model",user_model_chema,"users")

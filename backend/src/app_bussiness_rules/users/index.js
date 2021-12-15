@@ -1,4 +1,4 @@
-const { create } = require("./use_cases/login")
+const { create } = require("./use_cases/create")
 
 const create_user = create()
 
