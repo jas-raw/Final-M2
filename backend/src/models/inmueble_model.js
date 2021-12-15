@@ -26,7 +26,7 @@ const inmueble_model_chema = new Schema({
         type: String
     },
     valor:{
-        type: BigInt
+        type: Number
     },
     nombre_asesor:{
         type: String
