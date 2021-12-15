@@ -33,6 +33,9 @@ const inmueble_model_chema = new Schema({
     },
     telefono_asesor: {
         type: String
+    },
+    imagenes: {
+        type: Array
     }
 });
 
