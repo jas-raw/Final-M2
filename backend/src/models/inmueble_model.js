@@ -1,19 +1,19 @@
 const {Schema, model} = require("mongoose");
 
-const inmueble_model_chema = new Schema({
+const inmueble_model_schema = new Schema({
     tipo:{
         type: String
     },
-    habitaciones:{
+    no_habitaciones:{
         type: Number
     },
-    baños:{
+    no_banos:{
         type: Number
     },
     patio:{
         type: Boolean
     },
-    pisos:{
+    no_pisos:{
         type: Number
     },
     sector:{
@@ -39,4 +39,4 @@ const inmueble_model_chema = new Schema({
     }
 });
 
-module.exports = model("inmueble_model",inmueble_model_chema,"inmuebles")
+module.exports = model("inmueble_model",inmueble_model_schema,"inmuebles")
