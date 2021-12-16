@@ -1,8 +1,10 @@
 const { create } = require("./use_cases/create")
-const { get } = require("./use_cases/get")
+const { search } = require("./use_cases/search")
+const inmueble = require("../../models/inmueble_model")
+const { log } = require('../../frameworks_and_drivers/drivers/logger')
 
 const create_inmueble = create()
-const get_inmueble = get()
+const get_inmueble = search(inmueble, log)
 
 module.exports = {
     create_inmueble,
