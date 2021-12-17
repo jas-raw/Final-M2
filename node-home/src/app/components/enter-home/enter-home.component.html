@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+<br><br>
+<h1 class="text-center ">Ingresa los datos del nuevo inmueble</h1>
+<br>
+<div class="container col-md-6">
+    <form action="" id="formClient" class="needs-validation" novalidate>
+        <div class="row">
+            <div class="col">
+                <input type="number" id="numberRoom" class="form-control" placeholder="N°Habitaciones">
+            </div>
+            <div class="col">
+                <input type="number" id="numberBath" class="form-control" placeholder="N°Baños">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <select class="form-select" aria-label="Default select example" id="playground">
+                    <option selected>Patio</option>
+                    <option value="1">Si</option>
+                    <option value="2">No</option>
+                </select>
+            </div>
+            <div class="col">
+                <input type="number" id="numberFloors" class="form-control" placeholder="N°Pisos">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <input type="text" id="sector" class="form-control" placeholder="Sector">
+            </div>
+            <div class="col">
+                <input type="text" id="budget" class="form-control" placeholder="Presupuesto">
+            </div>
+        </div>
+        <br>
+        <div class="text-center">
+            <a  href="./housesAvailable.html" class="btn btn-primary text-center" type="submit">Ingresar</a>
+        </div>
+    </form>
+</div>
+<br><br><br>
+<app-footer></app-footer>
+
