@@ -14,4 +14,6 @@ const verify_tk = (req,res, next)=>{
     }
 }
 
-module.exports = {verify_tk}
+module.exports = {
+    verify_tk
+}

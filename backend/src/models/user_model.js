@@ -5,12 +5,13 @@ const user_model_chema = new Schema({
         type: String
     },
     email:{
-        type: String
+        type: String,
+        unique: true
     },
     telefono:{
-        type: String
+        type: Number
     },
-    pass:{
+    password:{
         type: String
     }
 });

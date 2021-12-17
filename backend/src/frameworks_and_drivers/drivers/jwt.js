@@ -1,11 +1,11 @@
 const { secret_key } = require("./config")
 const jwt = require('jsonwebtoken')
 
-const generate_token = ()=>{
+const generate_token = (nombre, email, telefono)=>{
     return jwt.sign({
-        _id: this._id,
-        nombre: this.name,
-        email: this.email
+        nombre,
+        email,
+        telefono
     },secret_key)
 }
 

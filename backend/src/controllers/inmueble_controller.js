@@ -1,14 +1,21 @@
 const { create_inmueble, get_inmueble } = require("../app_bussiness_rules/inmuebles/index")
+const { SUCCESSFUL, SERVERERROR, CREATED } = require("../frameworks_and_drivers/drivers/config")
 class InmuebleController{
 
-    create_inmueble(req,res){
-        return res.send(create_inmueble())
+    async create_inmueble(req,res){
+        const inmueble = req.body
+        const user = req.user
+        let data = await create_inmueble(inmueble, user)
+        if(data.error){
+            return res.status(SERVERERROR).send(data)
+        }
+        return res.status(CREATED).send(data)
     }
 
     async get_inmueble(req, res){
         const filter = req.filter
         let data = await get_inmueble(filter)
-        return res.send(data)
+        return res.status(SUCCESSFUL).send(data)
     }
 
 }
