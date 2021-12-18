@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { HousesAvailableComponent } from './components/houses-available/houses-available.component';
 import { EnterHomeComponent } from './components/enter-home/enter-home.component';
+import { FormsModule } from '@angular/forms';
 
 //Rutas
 //import { app_routing } from './app.routes';
@@ -23,7 +24,8 @@ import { EnterHomeComponent } from './components/enter-home/enter-home.component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
    // app_routing
   ],
   providers: [],

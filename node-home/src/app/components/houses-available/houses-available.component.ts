@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { InmuebleI } from 'src/app/interfaces/inmuebles.interface';
+import { HousesService } from 'src/app/services/houses.service';
 
 @Component({
   selector: 'app-houses-available',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HousesAvailableComponent implements OnInit {
 
-  constructor() { }
+  defaultImg: string = "../../../assets/img/N-removebg-preview.png"
+  houses: InmuebleI[] = []
+
+  constructor(private houseService: HousesService) { }
 
   ngOnInit(): void {
+    this.houses = this.houseService.inmuebles
+  }
+
+  fileOut(str: string){
+    return this.houseService.convertImg(str)
   }
 
 }
